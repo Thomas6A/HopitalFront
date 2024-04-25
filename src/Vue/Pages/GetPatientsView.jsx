@@ -1,7 +1,7 @@
 import { Table } from "react-bootstrap";
 import { EyeFill, PencilFill, XOctagonFill } from "react-bootstrap-icons";
 
-const GetProducts = (patients) => {
+const GetPatientsView = (patients) => {
 
 
     return (
@@ -19,7 +19,7 @@ const GetProducts = (patients) => {
                         <th>{patient.getPrenom()}</th>
                         <th>{patient.getNom()}</th>
                         <th>
-                            <EyeFill color="#17A2B8" className="mx-2"/>
+                            <a href={"detail/"+patient.id}><EyeFill color="#17A2B8" className="mx-2"/></a>
                             <PencilFill color="#FFC107" className="mx-2"/>
                             <XOctagonFill color="#DC3545" className="mx-2"/>
                         </th>
@@ -30,4 +30,4 @@ const GetProducts = (patients) => {
     );
 };
 
-export default GetProducts;
+export default GetPatientsView;

@@ -6,7 +6,10 @@ class PatientModel{
     secu;
     date_anniversaire;
     date_creation;
-    date_modification
+    date_modification;
+    chambre;
+    service_id;
+    service_name;
 
     setId(id) {
         this.id = id;
@@ -62,6 +65,22 @@ class PatientModel{
 
     getModification() {
         return this.date_modification;
+    }
+
+    setChambre(chambre) {
+        this.chambre = chambre;
+    }
+
+    getChambre() {
+        return this.chambre;
+    }
+
+    setService(service) {
+        this.service = service;
+    }
+
+    getService() {
+        return this.service;
     }
 
 }
