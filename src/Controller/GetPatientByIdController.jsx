@@ -25,8 +25,9 @@ const GetPatientByIdController = () => {
         try {
             let response = await BedService.fetchBed(id_patient);
             let patient = new PatientModel();
-            if (response.data == null) {
+            if (response.data == "") {
                 response = await PatientService.fetchPatientsById(id_patient);
+                console.log(response);
                 patient.setId(response.data.idPatient);
                 patient.setPrenom(response.data.firstName);
                 patient.setNom(response.data.lastName);

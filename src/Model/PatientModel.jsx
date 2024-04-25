@@ -8,8 +8,7 @@ class PatientModel{
     date_creation;
     date_modification;
     chambre;
-    service_id;
-    service_name;
+    service
 
     setId(id) {
         this.id = id;
