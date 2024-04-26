@@ -42,9 +42,42 @@ function unassignPatient(patient){
     })
 }
 
+function postPatient(patient){
+    return axios({
+        method: 'post',
+        url: "https://api-ecf.sarahkatz.fr/patients",
+        headers: {},
+        data:{
+            "firstName":patient.prenom,
+            "lastName":patient.nom,
+            "birthdate":patient.date_anniversaire,
+            "socialSecurityNumber":patient.secu,
+        }
+    })
+}
+
+function putPatient(patient){
+    return axios({
+        method: 'put',
+        url: "https://api-ecf.sarahkatz.fr/patients",
+        headers: {},
+        data:{
+            "idPatient":patient.id,
+            "firstName":patient.prenom,
+            "lastName":patient.nom,
+            "birthdate":patient.date_anniversaire,
+            "socialSecurityNumber":patient.secu,
+            "createdAt":patient.date_creation,
+            "modifiedAt":patient.date_modification
+        }
+    })
+}
+
 export default{
     fetchPatients,
     fetchPatientsById,
     assignPatient,
-    unassignPatient
+    unassignPatient,
+    postPatient,
+    putPatient
 }

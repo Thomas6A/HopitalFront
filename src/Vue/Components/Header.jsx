@@ -8,7 +8,7 @@ const Header = () => {
                 <Container className="w-100">
                     <Navbar.Brand className="mx-auto">Hopital</Navbar.Brand>
                 </Container>
-                <Button variant="light" className="mx-2 w-50">Créer</Button>
+                <Button href="/form/null" variant="light" className="mx-2 w-50">Créer</Button>
             </Navbar>
             <br />
         </>

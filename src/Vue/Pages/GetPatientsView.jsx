@@ -3,7 +3,6 @@ import { EyeFill, PencilFill, XOctagonFill } from "react-bootstrap-icons";
 
 const GetPatientsView = (patients) => {
 
-
     return (
         <Table bordered>
             <thead>
@@ -20,7 +19,7 @@ const GetPatientsView = (patients) => {
                         <th>{patient.getNom()}</th>
                         <th>
                             <a href={"detail/"+patient.id}><EyeFill color="#17A2B8" className="mx-2"/></a>
-                            <PencilFill color="#FFC107" className="mx-2"/>
+                            <a href={"form/"+patient.id}><PencilFill  color="#FFC107" className="mx-2"/></a>
                             <XOctagonFill color="#DC3545" className="mx-2"/>
                         </th>
                     </tr>
