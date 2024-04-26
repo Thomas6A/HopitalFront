@@ -1,7 +1,13 @@
 import { Table } from "react-bootstrap";
 import { EyeFill, PencilFill, XOctagonFill } from "react-bootstrap-icons";
+import DeletePatientController from "../../Controller/DeletePatientController";
 
 const GetPatientsView = (patients) => {
+
+    const handleClick = (patient) =>{
+        DeletePatientController(patient.id);
+        window.location.reload();
+    }
 
     return (
         <Table bordered>
@@ -20,7 +26,7 @@ const GetPatientsView = (patients) => {
                         <th>
                             <a href={"detail/"+patient.id}><EyeFill color="#17A2B8" className="mx-2"/></a>
                             <a href={"form/"+patient.id}><PencilFill  color="#FFC107" className="mx-2"/></a>
-                            <XOctagonFill color="#DC3545" className="mx-2"/>
+                            <a onClick={() => handleClick(patient)}><XOctagonFill color="#DC3545" className="mx-2"/></a>
                         </th>
                     </tr>
                 ))}

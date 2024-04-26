@@ -73,11 +73,16 @@ function putPatient(patient){
     })
 }
 
+function deletePatient(id){
+    return axios.delete("https://api-ecf.sarahkatz.fr/patients/"+id)
+}
+
 export default{
     fetchPatients,
     fetchPatientsById,
     assignPatient,
     unassignPatient,
     postPatient,
-    putPatient
+    putPatient,
+    deletePatient
 }
