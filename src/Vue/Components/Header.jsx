@@ -4,11 +4,11 @@ const Header = () => {
     return (
         <>
             <Navbar fixed="top" bg="primary" data-bs-theme="dark">
-                <Button href="/" variant="light" className="mx-2 w-50">Accueil</Button>
+                <Button href="/" variant="light" className="mx-2">Accueil</Button>
                 <Container className="w-100">
                     <Navbar.Brand className="mx-auto">Hopital</Navbar.Brand>
                 </Container>
-                <Button href="/form/null" variant="light" className="mx-2 w-50">Créer</Button>
+                <Button href="/form/null" variant="light" className="mx-2">Créer</Button>
             </Navbar>
             <br />
         </>

@@ -18,7 +18,7 @@ const FormPatientController = () => {
 
     const fetchPatient = async () => {
         try {
-            if (id != null) {
+            if (id != "null") {
                 let patient = new PatientModel();
                 let response = await PatientService.fetchPatientsById(id);
                 patient.setId(response.data.idPatient);
